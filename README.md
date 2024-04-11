@@ -11,6 +11,20 @@ $$ T(n) =
     \end{cases}
 $$
 
+- We can start by looking at iterations of the recurracne realtion to find a pattern.
+- $T\left(n\right) = T\left(\frac{n}{13}\right) + 5$
+- $T\left(\frac{n}{13}\right) = T(\frac{\frac{n}{13}}{13}) + 5 + 5 = T\left(\frac{n}{13^{2}}\right) + 5 + 5$
+- $T\left(\frac{\frac{n}{13^{2}}}{13}\right) + 5 + 5 + 5 = T\left(\frac{n}{13^{3}}\right) + 5 + 5 + 5$
+- With these iterations we can see the patter $T\left(\frac{n}{13^{k}}\right) + 5i$
+- We want to get to the base case $n \leq 1$.
+- We do this by solving $\frac{n}{13^{k}} \leq 1$
+- We can multiply $13^{k}$ to both sides then take the $\log_{13}$ of each side which gives us.
+- $\log_{13}n \leq k$
+- which tells us that it will take $\log_{13}n \leq k$ iterations for us to reach our base case.
+- Next we can replace $k$ and $i$ with $\log_{13}n$ to find the Big $\theta$ bound.
+- $T\left(n\right) = \frac{n}{13^{\log_{13}}n} + 5\log_{13}n$
+- This shows us that the asymtotic complexity is $T(n) \in \Theta\\left(log\space n\right)$
+   
 2.
 $$ T(n) =
     \begin{cases}
