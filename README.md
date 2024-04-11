@@ -33,6 +33,16 @@ $$ T(n) =
     \end{cases}
 $$
 
+- We can use the same technique from question one to determine the Big $\Theta$ bounds.
+- First we find the pattern. 
+- $T\left(n\right) = 13T\left(\frac{n}{13}\right) + 5$
+- $T\left(\frac{n}{13}\right) = 13\times13T\left(\frac{\frac{n}{13}}{13}\right) + 5 + 5$
+- Then we solve for n.
+- 
+- Subsititute back in.
+- 
+- The asymtotic compleixty is $T(n) = \Theta\left(n\right)
+
 3.
 $$ T(n) =
     \begin{cases}
